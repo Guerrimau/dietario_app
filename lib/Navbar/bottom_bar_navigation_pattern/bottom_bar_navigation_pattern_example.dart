@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'animated_bottom_bar.dart';
 import '../../Pantallas/PantallaInicio/pantalla_inicio.dart';
+import '../../Pantallas/Dietario/dietario.dart';
+import '../../Pantallas/Perfil/perfil.dart';
+import '../../Pantallas/Progreso/progreso.dart';
 
 class BottomBarNavigation extends StatefulWidget {
   final List<BarItem> barItems = [
@@ -38,9 +41,9 @@ class _BottomBarNavigationPattern
   Widget callPage(int selectedBarIndex){
     switch(selectedBarIndex) {
       case 0: return PantallaInicio();
-      case 1: return PantallaInicio();
-      case 2: return PantallaInicio();
-      case 3: return PantallaInicio();
+      case 1: return Dietario();
+      case 2: return Progreso();
+      case 3: return Perfil();
       default: return PantallaInicio();
     }
   }

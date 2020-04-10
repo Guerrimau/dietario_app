@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
+import '../../Componentes/tarjeta_comida.dart';
 
 class PantallaInicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-	 return Container(
-		child: Text(
-			"PANTALLA DE INICIO",
-			style: TextStyle(
-				fontSize: 20,
-				fontWeight: FontWeight.bold
-			))
-	 );
+	 return (
+     Column(
+       children: <Widget> [
+         TarjetaComida()
+       ]
+     )
+   );
   }
 }
