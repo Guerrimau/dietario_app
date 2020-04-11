@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../Componentes/fondo_verde.dart';
 import '../../Componentes/tarjeta_comida.dart';
+import '../../Componentes/tarjeta_comida.dart';
+import '../../Componentes/tarjeta_comida.dart';
 
 class PantallaInicio extends StatelessWidget {
   
@@ -16,18 +18,16 @@ class PantallaInicio extends StatelessWidget {
    
    
    return (
-     Stack(
+     ListView(
        children: <Widget> [
-         FondoVerde(titulo , 250, 1.0, 35),
-         ListView(
+         Stack(
            children: <Widget> [
              cajaInvisible,
-             TarjetaComida(),
-             TarjetaComida(),
-             TarjetaComida(),
-             TarjetaComida()
+             FondoVerde(titulo , 250, 1.0, 35),
            ]
          ),
+         TarjetaComida(),
+         TarjetaComida()
        ]
      )
    );
