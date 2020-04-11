@@ -5,11 +5,16 @@ import '../../Componentes/fondo_verde.dart';
 
 class Perfil extends StatelessWidget {
   
-  String nombreUsuario = "Jose Manuel Felix ";
+  String nombreUsuario = "Jose Manuel  ";
+ 
+
 
   @override
   Widget build(BuildContext context) {
 	 
+   
+
+
    final nombre = Text(
      nombreUsuario,
      style: TextStyle(
@@ -18,13 +23,17 @@ class Perfil extends StatelessWidget {
        fontFamily: "Lato",
      ),
     );
+
+
    
    return MaterialApp(
+     debugShowCheckedModeBanner: false,
      home: Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
+            
             height: 300,
             padding: EdgeInsets.only(bottom: 10),
             decoration: BoxDecoration(
@@ -36,8 +45,7 @@ class Perfil extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  UserPhoto(assetImage: 'assets/perfil.jpg',
-                  size: 150),
+                  UserPhoto(assetImage: 'assets/images/perfil.jpg', size:150,),
                         nombre,
                 ],
                 ),
@@ -63,19 +71,18 @@ class UserPhoto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: this.size,
-      height: this.size,
+      width: 150,
+      height: 150,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(this.assetImage),
+          image: AssetImage('assets/images/perfil.jpg'),
           fit: BoxFit.cover,
           ),
           shape: BoxShape.circle,
           border: Border.all(color: Colors.white,
-          width: 4,
+          )
           ),
-          ),
-          margin: EdgeInsets.only(bottom: 5),
+          margin: EdgeInsets.only(bottom:5),
           );
   }
 }
