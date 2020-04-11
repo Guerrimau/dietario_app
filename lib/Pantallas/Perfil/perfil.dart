@@ -3,10 +3,11 @@
 import 'package:flutter/material.dart';
 import '../../Componentes/fondo_verde.dart';
 
+
 class Perfil extends StatelessWidget {
   
   String nombreUsuario = "Jose Manuel  ";
- 
+  String perfil= "Perfil";
 
 
   @override
@@ -21,22 +22,28 @@ class Perfil extends StatelessWidget {
        color: Colors.white, 
        fontSize: 18,
        fontFamily: "Lato",
+        fontWeight: FontWeight.bold,
      ),
+    );
+
+    final titulo= Text(
+      perfil,
+      style: TextStyle(
+           color: Colors.white,
+           fontSize: 30,
+           fontFamily: "Lato",
+           fontWeight: FontWeight.bold,
+          ),
     );
 
    return MaterialApp(
      debugShowCheckedModeBanner: false,
      home: Scaffold(
        appBar: AppBar(
-         title: Text("Perfil",
-         style: TextStyle(
-           color: Colors.white,
-           fontSize: 30,
-           fontFamily: "Lato",
-           fontWeight: FontWeight.bold,
-           ),
-       ),
+         title: 
+         titulo, 
        backgroundColor: Color(0xFF66E002),
+       
        ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -48,7 +55,7 @@ class Perfil extends StatelessWidget {
             color:Color(0xFF66E002),
             
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   UserPhoto(assetImage: 'assets/images/perfil.jpg', size:150,),
                         nombre,
