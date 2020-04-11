@@ -24,11 +24,20 @@ class Perfil extends StatelessWidget {
      ),
     );
 
-
-   
    return MaterialApp(
      debugShowCheckedModeBanner: false,
      home: Scaffold(
+       appBar: AppBar(
+         title: Text("Perfil",
+         style: TextStyle(
+           color: Colors.white,
+           fontSize: 30,
+           fontFamily: "Lato",
+           fontWeight: FontWeight.bold,
+           ),
+       ),
+       backgroundColor: Color(0xFF66E002),
+       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
@@ -36,12 +45,8 @@ class Perfil extends StatelessWidget {
             
             height: 300,
             padding: EdgeInsets.only(bottom: 10),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/images/fondo.jpg'),
-                fit: BoxFit.cover
-                )
-              ),
+            color:Color(0xFF66E002),
+            
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
