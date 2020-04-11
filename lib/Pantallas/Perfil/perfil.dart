@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
+import '../../Componentes/fondo_verde.dart';
 
 class Perfil extends StatelessWidget {
+  
+  String nombreUsuario = "Jose Manuel";
+
   @override
   Widget build(BuildContext context) {
-	 return Container(
-    alignment: Alignment.center,
-		child: Text(
-			"PANTALLA DE PERFIL",
-			style: TextStyle(
-				fontSize: 20,
-				fontWeight: FontWeight.bold
-			))
-	 );
+	 
+   
+   return (
+     Stack(
+       children: <Widget> [
+         FondoVerde("Perfil", 450, -1.0, 30)
+       ]
+     )
+   );
   }
 }

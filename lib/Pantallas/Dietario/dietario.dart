@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import '../../Componentes/fondo_verde.dart';
 
 class Dietario extends StatelessWidget {
+  
+  final String titulo = "Mi Plan";
+  
   @override
   Widget build(BuildContext context) {
-	 return Container(
-    alignment: Alignment.center,
-		child: Text(
-			"PANTALLA DE DIETA",
-			style: TextStyle(
-				fontSize: 20,
-				fontWeight: FontWeight.bold,
-			))
-	 );
+	 return (
+     Stack(
+       children: <Widget> [
+         FondoVerde(titulo, 250, 1.0, 30)
+       ]
+     )
+   );
   }
 }
