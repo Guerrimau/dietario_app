@@ -1,8 +1,5 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import '../../Componentes/fondo_verde.dart';
 import 'package:vector_math/vector_math_64.dart' as math;
 import 'package:intl/intl.dart';
 
