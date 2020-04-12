@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 
 class Perfil extends StatelessWidget {
   
-  final String titulo = "Perfil";
+  //final String titulo = "Perfil";
   final today =DateTime.now();
   
   @override
