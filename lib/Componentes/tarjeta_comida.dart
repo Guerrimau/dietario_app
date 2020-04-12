@@ -41,7 +41,7 @@ class TarjetaComida extends StatelessWidget {
       height: 100.0,
       width: 300,
       margin: EdgeInsets.only(
-          top: 250.0,
+          top: 250,
       ),
       decoration: BoxDecoration(
           color: Colors.white,
@@ -70,7 +70,7 @@ class TarjetaComida extends StatelessWidget {
 
     return(
       Align(
-        alignment: Alignment.bottomCenter,
+        alignment: Alignment.topCenter,
         child: Stack(
                 alignment: Alignment.center,
                 children: <Widget>[

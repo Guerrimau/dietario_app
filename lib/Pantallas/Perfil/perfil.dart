@@ -1,7 +1,5 @@
-
-
 import 'package:flutter/material.dart';
-import '../../Componentes/fondo_verde.dart';
+
 
 
 class Perfil extends StatelessWidget {
@@ -13,9 +11,6 @@ class Perfil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 	 
-   
-
-
    final nombre = Text(
      nombreUsuario,
      style: TextStyle(
