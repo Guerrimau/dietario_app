@@ -13,7 +13,7 @@ class BotonVerde extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.only(
           top: 0.0,
-          left: 20.0,
+          right: 20.0
         ),
         height: 30.0,
         width: 100.0,
@@ -21,12 +21,12 @@ class BotonVerde extends StatelessWidget {
           borderRadius: BorderRadius.circular(30.0),
           gradient: LinearGradient(
             colors: [
-              Color(0xFF66E002),
+              Color(0xFF76E917),
               Color(0xFF40C26D),
             ],
-            begin: FractionalOffset(0.2,0.0),
-            end: FractionalOffset(1.0,0.6),
-            stops: [0.0,0.6],
+            begin: FractionalOffset(-1.0, 1.0),
+            end: FractionalOffset(1.0, -1.0),
+            stops: [0.3, 1.0],
             tileMode: TileMode.clamp,
           )
         ),
