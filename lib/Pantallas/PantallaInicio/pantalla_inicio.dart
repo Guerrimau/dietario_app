@@ -1,6 +1,6 @@
-import 'package:dietario_app/Componentes/tarjeta_comida.dart';
 import 'package:flutter/material.dart';
 import '../../Componentes/widgets_pantalla.dart';
+import '../../Componentes/tarjeta_comida.dart';
 
 class PantallaInicio extends StatelessWidget {
   
