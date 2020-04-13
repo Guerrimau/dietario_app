@@ -71,7 +71,7 @@ class Dietario extends StatelessWidget {
     child: Icon(
       Icons.menu,
       color: Colors.black87,
-      size: 40,
+      size: 30,
     ),
   );
    

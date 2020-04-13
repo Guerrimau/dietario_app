@@ -1,120 +1,71 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:vector_math/vector_math_64.dart' as math;
-import 'package:intl/intl.dart';
+import '../../Componentes/widgets_pantalla.dart';
+import '../../Componentes/widgets_pantalla.dart';
 
 class Perfil extends StatelessWidget {
   
-  //final String titulo = "Perfil";
-  final today =DateTime.now();
-  
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-
-	 return Scaffold (
-     backgroundColor: const Color(0xFF66E002),
-      
-      body:Stack(
-        children: <Widget> [
-         Positioned(
-           top:0,
-           height: height*0.40,
-           left: 0,
-           right: 0,
-          
-           child: Container(
-             color: Color(0xFF66E002),
-             padding: const EdgeInsets.only(top: 50, left: 32, right: 32, bottom: 5),
-             child: Column(
-               children: <Widget>[
-                 ListTile(
-                   title: Text(
-                     "${DateFormat("EEEE").format(today)}, ${DateFormat("d MMMM").format(today)}", 
-                   style: TextStyle(
-                     color: Colors.white,
-                     fontSize: 15,
-                     fontFamily: "LATO"),
-                     ),
-                 subtitle: Text("Hello, Alberto Gutierrez", style: TextStyle(color: Colors.white,fontSize: 25,fontFamily: "LATO"),),
-                 ),
-                 _Dp(
-                   width: height * 0.2,
-                   height: height * 0.2,
-               ),
-
-               ], 
-               
-             ),
-            
-             ),
-           
-          ),
-          
-         Positioned(
-           top:height*0.38, 
-           left: 0,
-           right: 0,
-           
-           child:Container(
-              color: Colors.white,
-              height: height,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      bottom: 8,
-                      left: 32,
-                      right: 18,
-                      ),
-                      child: Text("Mis Macros", 
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: "LATO",
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24,
-                        
+    return (Scaffold(
+      body: SingleChildScrollView(
+        child: Container(
+            child: Column(
+             children: <Widget>[
+              Stack(children: <Widget>[
+                //Aqui se ingresa el contenido de las cabeceras 
+                DegradadoVerde(MediaQuery.of(context).size.height * 0.4),
+                Positioned(
+                  child: Row(
+                    children: <Widget>[
+                      Titulo("Perfil"),
+                      //AGREGAR ICONO DE CONFIGURACION
+                    ]),
+                  //Acomodarlo bien con las propiedades top y left  
+                ),
+                Positioned(
+                  child: Column(
+                    children: <Widget>[
+                        _Dp(
+                          width: MediaQuery.of(context).size.height * 0.1,
+                          height: MediaQuery.of(context).size.height * 0.1,
                         ),
-                      ),
+                        //Agregar Nombre y Datos como lo muestra el diseño putito 
+                        //Centrar la foto, nombre y datos
+                    ],
                   ),
-                  Expanded(
-                         
-                          child: Column(
-                            
-                            children: <Widget>[
-                              Container(
-                                height: 450,
-                                width: 450,
-                                padding: EdgeInsets.only(bottom: 10),
-                                
-                             child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  _RadialProgress(
-                                    
-                                  ),
-                                  SizedBox(height: 100,),
-                              ],
-                                ),
-                            )
-                          ], 
-                        
+                  bottom: 30,
+                ),
+                Positioned(
+                  child: CurvaBlanca(),
+                  bottom: 0,
+                )
+              ]),
+              //Aqui se ingresa el contenido de la pagina
+              SubTitulo("Mi Macros"),
+              
+              Column(
+                children: <Widget>[
+                  Container(
+                      height: 450,
+                      width: 450,
+                      padding: EdgeInsets.only(bottom: 10),         
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                              _RadialProgress(  
+                              ),
+                              SizedBox(height: 100,),
+                          ],
                       ),
-                         
-                  ),
+                  )
                 ],
-                
               ),
-          ),
-             
-         
-         ),
-       ]
-     ),
-     
-
-   );
+            ]
+        ),
+      ),
+    )));
   }
 }
 
@@ -126,16 +77,13 @@ class _Dp extends StatelessWidget{
   Widget build (BuildContext context){
     return Container( 
       height: 180,
-            padding: EdgeInsets.only(bottom: 10),
-            color:Color(0xFF66E002),
-            
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  UserPhoto(assetImage: 'assets/images/perfil.jpg', size:150,),
-                       
-                ],
-              ),
+      padding: EdgeInsets.only(bottom: 10),
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            UserPhoto(assetImage: 'assets/images/perfil.jpg', size:150,),      
+          ],
+      ),
     );
   }
 }
@@ -167,8 +115,6 @@ class UserPhoto extends StatelessWidget {
           fit: BoxFit.cover,
           ),
           shape: BoxShape.circle,
-          border: Border.all(color: Colors.white,
-          )
           ),
           margin: EdgeInsets.only(bottom:5),
           );

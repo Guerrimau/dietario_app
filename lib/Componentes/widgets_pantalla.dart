@@ -66,8 +66,7 @@ class Titulo extends StatelessWidget {
         nombreTitulo,
         style: TextStyle(
           fontFamily: "Lato",
-          fontSize: 35.0,
-          fontWeight: FontWeight.w900,
+          fontSize: 30.0,
           color: Color(0xFFFAFAFA)
         ),
       )
@@ -95,7 +94,7 @@ class SubTitulo extends StatelessWidget {
         style: TextStyle(
           fontFamily: "Lato",
           fontSize: 25.0,
-          fontWeight: FontWeight.w600,
+          fontWeight: FontWeight.w300,
           color: Colors.black87
         ),
       )

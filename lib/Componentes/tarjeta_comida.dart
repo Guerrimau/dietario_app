@@ -19,7 +19,7 @@ class TarjetaComida extends StatelessWidget {
         children: <Widget>[
           Icon(
             Icons.access_time,
-            color: Colors.grey,
+            color: Colors.grey.withOpacity(0.6)
           ),
           Container(
             margin: EdgeInsets.only(
@@ -31,10 +31,36 @@ class TarjetaComida extends StatelessWidget {
                 fontFamily: "Lato",
                 fontSize: 15,
                 fontWeight: FontWeight.w400,
-                color: Colors.grey
+                color: Colors.grey.withOpacity(0.6)
               ),
             ),
-          )
+          ),
+          Container(
+            margin: EdgeInsets.only(
+              left: 10
+            ),
+            child: Row(
+              children: <Widget>[
+                Icon(
+                  Icons.favorite,
+                  color: Colors.grey.withOpacity(0.6),
+                ),
+                Container(
+                  margin: EdgeInsets.only(
+                    left: 5
+                  ),
+                  child: Text(
+                    "85",
+                    style: TextStyle(
+                      fontFamily: "Lato",
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.grey.withOpacity(0.6)
+                    ),
+                  ),
+                ),
+              ]),
+          ),
         ],
       ),
     );
@@ -58,9 +84,9 @@ class TarjetaComida extends StatelessWidget {
     
     final tarjetaInfo = Container(
       height: 90.0,
-      width: MediaQuery.of(context).size.width * 0.60,
+      width: MediaQuery.of(context).size.width * 0.70,
       margin: EdgeInsets.only(
-        bottom: 20
+        bottom: 0
       ),
       decoration: BoxDecoration(
           color: Colors.white,
@@ -68,9 +94,9 @@ class TarjetaComida extends StatelessWidget {
           shape: BoxShape.rectangle,
           boxShadow: <BoxShadow> [
             BoxShadow(
-                color: Colors.black12,
-                blurRadius: 15.0,
-                offset: Offset(0.0,5.0)
+                color: Colors.grey.withOpacity(0.3),
+                blurRadius: 20.0,
+                offset: Offset(0.0,10.0)
             )
           ]
       ),
@@ -91,7 +117,7 @@ class TarjetaComida extends StatelessWidget {
     
     final cuadroComida = Container(
                 width: MediaQuery.of(context).size.width * 0.85,
-                height: 200,
+                height: 250,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.cover,
@@ -106,9 +132,9 @@ class TarjetaComida extends StatelessWidget {
     return 
     Container(
           margin: EdgeInsets.only(
-            bottom: 15
+            bottom: 25
           ),
-          height: 260,
+          height: 290,
           width: MediaQuery.of(context).size.width * 0.85,
           child: (
             Stack(
