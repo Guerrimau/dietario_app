@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'boton_verde.dart';
+import '../Pantallas/DetallesComida/detalles_comida.dart';
 
 class TarjetaComida extends StatelessWidget {
   
@@ -130,26 +131,34 @@ class TarjetaComida extends StatelessWidget {
     );
     
     return 
-    Container(
-          margin: EdgeInsets.only(
-            bottom: 25
-          ),
-          height: 290,
-          width: MediaQuery.of(context).size.width * 0.85,
-          child: (
-            Stack(
-              children: <Widget>[
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: cuadroComida
-                ),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: tarjetaInfo
-                )
-              ]
-            )
-          ),
+    InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DetallesComida()),
+            );
+          },
+          child: Container(
+            margin: EdgeInsets.only(
+              bottom: 25
+            ),
+            height: 290,
+            width: MediaQuery.of(context).size.width * 0.85,
+            child: (
+              Stack(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.topCenter,
+                    child: cuadroComida
+                  ),
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: tarjetaInfo
+                  )
+                ]
+              )
+            ),
+      ),
     );
   }
 }
