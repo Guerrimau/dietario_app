@@ -7,6 +7,7 @@ import 'package:flutter/rendering.dart';
 class PantallaInicio extends StatelessWidget {
   //Alto de la cabecera con degradado
   final double alto = 200;
+  
 
   @override
   Widget build(BuildContext context) {

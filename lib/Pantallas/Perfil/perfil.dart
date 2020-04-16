@@ -3,11 +3,26 @@ import 'package:flutter/rendering.dart';
 import 'package:vector_math/vector_math_64.dart' as math;
 import '../../Componentes/widgets_pantalla.dart';
 import '../../Componentes/widgets_pantalla.dart';
+import 'package:dietario_app/Pantallas/DetallesComida/detalles_comida.dart';
+import 'package:dietario_app/Pantallas/Configuracion/configuracion.dart';
+
 
 class Perfil extends StatelessWidget {
+  String nombreUsuario ="Alberto Gutierrez";
+  final double altura = 170;
+  final double peso = 70;
+  final double imc = 0;
   
   @override
   Widget build(BuildContext context) {
+    final nombre = Text(
+    nombreUsuario,
+    style: TextStyle(
+      color: Colors.white,
+      fontSize: 20),
+    );
+    
+
     return (Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -17,26 +32,62 @@ class Perfil extends StatelessWidget {
                 //Aqui se ingresa el contenido de las cabeceras 
                 DegradadoVerde(MediaQuery.of(context).size.height * 0.4),
                 Positioned(
+                  top:20, left: 15,
                   child: Row(
                     children: <Widget>[
                       Titulo("Perfil"),
                       //AGREGAR ICONO DE CONFIGURACION
-                    ]),
-                  //Acomodarlo bien con las propiedades top y left  
+                    ]
+                    
+                  ),
+                 //Acomodarlo bien con las propiedades top y left  
                 ),
                 Positioned(
+                  right: 15,
+                  top:30,
+                   child: InkWell(
+                    onTap: (){
+                      Navigator.of(context).pop();
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => Configuracion()
+                        ),
+                     );
+                    },
+                    child: Icon(
+                      Icons.settings,
+                      color: Color(0xFFFAFAFA),
+                      size: 30,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top:65,
+                  right: 40,
+                  left: 40,
+
                   child: Column(
                     children: <Widget>[
                         _Dp(
                           width: MediaQuery.of(context).size.height * 0.1,
                           height: MediaQuery.of(context).size.height * 0.1,
                         ),
+                        nombre,
+                        Text(
+                        "${peso.toStringAsFixed(0)} Kg · ${altura.toStringAsFixed(0)} m ",
+                            style: TextStyle(
+                              fontFamily: 'Lato',
+                              fontSize: 15,
+                              color: Color(0xFFFAFAFA),
+                              fontWeight: FontWeight.w400
+                            ),
+                        ),
                         //Agregar Nombre y Datos como lo muestra el diseño putito 
                         //Centrar la foto, nombre y datos
                     ],
                   ),
-                  bottom: 30,
                 ),
+                
                 Positioned(
                   child: CurvaBlanca(),
                   bottom: 0,
@@ -76,7 +127,7 @@ class _Dp extends StatelessWidget{
   @override
   Widget build (BuildContext context){
     return Container( 
-      height: 180,
+      height: 165,
       padding: EdgeInsets.only(bottom: 10),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
