@@ -11,7 +11,7 @@ class Perfil extends StatelessWidget {
   String nombreUsuario ="Alberto Gutierrez";
   final double altura = 170;
   final double peso = 70;
-  final double imc = 0;
+  final double imc = 25;
   
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,42 @@ class Perfil extends StatelessWidget {
     nombreUsuario,
     style: TextStyle(
       color: Colors.white,
-      fontSize: 20),
+      fontSize: 25),
     );
+
+    final configIcon = Container(
+                        margin: EdgeInsets.only(
+                          bottom: 20,
+                          right: 20
+                        ),
+                        child: InkWell(
+                          onTap: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Configuracion()),
+                            );
+                          },
+                          child: Icon(
+                            Icons.settings,
+                            color: Color(0xFFFAFAFA),
+                            size: 30,
+                          ),
+                        ),
+                      );
     
+    final topApp = SafeArea(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            child: Titulo("Perfil")
+          ),
+          Container(
+            child: configIcon,
+          ),
+        ]
+      )
+    );
 
     return (Scaffold(
       body: SingleChildScrollView(
@@ -29,43 +62,15 @@ class Perfil extends StatelessWidget {
             child: Column(
              children: <Widget>[
               Stack(children: <Widget>[
-                //Aqui se ingresa el contenido de las cabeceras 
                 DegradadoVerde(MediaQuery.of(context).size.height * 0.4),
+                //Aqui se ingresa el contenido de las cabeceras 
                 Positioned(
-                  top:20, left: 15,
-                  child: Row(
-                    children: <Widget>[
-                      Titulo("Perfil"),
-                      //AGREGAR ICONO DE CONFIGURACION
-                    ]
-                    
-                  ),
-                 //Acomodarlo bien con las propiedades top y left  
+                  child: topApp,
                 ),
                 Positioned(
-                  right: 15,
-                  top:30,
-                   child: InkWell(
-                    onTap: (){
-                      Navigator.of(context).pop();
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (BuildContext context) => Configuracion()
-                        ),
-                     );
-                    },
-                    child: Icon(
-                      Icons.settings,
-                      color: Color(0xFFFAFAFA),
-                      size: 30,
-                    ),
-                  ),
-                ),
-                Positioned(
-                  top:65,
+                  top:48,
                   right: 40,
                   left: 40,
-
                   child: Column(
                     children: <Widget>[
                         _Dp(
@@ -74,10 +79,10 @@ class Perfil extends StatelessWidget {
                         ),
                         nombre,
                         Text(
-                        "${peso.toStringAsFixed(0)} Kg · ${altura.toStringAsFixed(0)} m ",
+                        "${altura.toStringAsFixed(0)} cm · ${peso.toStringAsFixed(0)} kg · ${imc.toStringAsFixed(0)} imc",
                             style: TextStyle(
                               fontFamily: 'Lato',
-                              fontSize: 15,
+                              fontSize: 20,
                               color: Color(0xFFFAFAFA),
                               fontWeight: FontWeight.w400
                             ),
@@ -128,7 +133,6 @@ class _Dp extends StatelessWidget{
   Widget build (BuildContext context){
     return Container( 
       height: 165,
-      padding: EdgeInsets.only(bottom: 10),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -158,8 +162,8 @@ class UserPhoto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
-      height: 150,
+      width: 120,
+      height: 120,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/perfil.jpg'),

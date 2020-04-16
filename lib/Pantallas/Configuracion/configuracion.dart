@@ -34,12 +34,7 @@ class Configuracion extends StatelessWidget {
                   top:40,
                    child: InkWell(
                     onTap: (){
-                      Navigator.of(context).pop();
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (BuildContext context) => Perfil()
-                        ),
-                     );
+                      Navigator.pop(context);
                     },
                     child: Icon(
                       Icons.arrow_back,
