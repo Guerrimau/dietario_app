@@ -20,30 +20,29 @@ class Configuracion extends StatelessWidget {
                 //Aqui se ingresa el contenido de las cabeceras 
                 DegradadoVerde(MediaQuery.of(context).size.height * 0.15),
                 Positioned(
-                  top:40, left: 150,right:15,
+                  left: 20, bottom: 30,
                   child: Row(
                     children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.only(
+                          bottom: 20
+                        ),
+                        child: InkWell(
+                          onTap: (){
+                            Navigator.pop(context);
+                          },
+                          child: Icon(
+                            Icons.arrow_back,
+                            color: Color(0xFFFAFAFA),
+                            size: 30,
+                          ),
+                        ),
+                      ),
                       Titulo("Configuracion"),
                     ]
-                    
                   ),
                  //Acomodarlo bien con las propiedades top y left  
                 ),
-                Positioned(
-                  right: 350,left:0,
-                  top:40,
-                   child: InkWell(
-                    onTap: (){
-                      Navigator.pop(context);
-                    },
-                    child: Icon(
-                      Icons.arrow_back,
-                      color: Color(0xFFFAFAFA),
-                      size: 30,
-                    ),
-                  ),
-                ),
-                
                 
                 Positioned(
                   child: CurvaBlanca(),

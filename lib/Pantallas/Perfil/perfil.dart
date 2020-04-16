@@ -18,7 +18,7 @@ class Perfil extends StatelessWidget {
     final nombre = Text(
     nombreUsuario,
     style: TextStyle(
-      color: Colors.white,
+      color: Color(0xFFFAFAFA),
       fontSize: 25),
     );
 
@@ -47,9 +47,15 @@ class Perfil extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Container(
+            margin: EdgeInsets.only(
+              top:8,
+            ),
             child: Titulo("Perfil")
           ),
           Container(
+            margin: EdgeInsets.only(
+              top:8,
+            ),
             child: configIcon,
           ),
         ]
@@ -62,13 +68,11 @@ class Perfil extends StatelessWidget {
             child: Column(
              children: <Widget>[
               Stack(children: <Widget>[
-                DegradadoVerde(MediaQuery.of(context).size.height * 0.4),
+                DegradadoVerde(MediaQuery.of(context).size.height * 0.42),
                 //Aqui se ingresa el contenido de las cabeceras 
+                topApp,
                 Positioned(
-                  child: topApp,
-                ),
-                Positioned(
-                  top:48,
+                  top:60,
                   right: 40,
                   left: 40,
                   child: Column(
