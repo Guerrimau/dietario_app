@@ -1,3 +1,4 @@
+import 'package:dietario_app/Pantallas/BusquedaNutriologo/busqueda_nutriologos.dart';
 import 'package:flutter/material.dart';
 import '../../Componentes/widgets_pantalla.dart';
 import '../../Componentes/tarjeta_comida.dart';
@@ -7,10 +8,24 @@ import 'package:flutter/rendering.dart';
 class PantallaInicio extends StatelessWidget {
   //Alto de la cabecera con degradado
   final double alto = 200;
-  
 
   @override
   Widget build(BuildContext context) {
+    
+    final botonFantasma = InkWell(
+      onTap: () {
+        Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => BusquedaNutriologos()),
+        );
+      },
+      child: Container(
+        color: Colors.grey,
+        width: 50,
+        height: 50,
+      )
+    );
+    
     return (Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -33,6 +48,7 @@ class PantallaInicio extends StatelessWidget {
               SubTitulo("Tu comida de hoy"),
               TarjetaComida(),
               SubTitulo("Nutrinfo"),
+              botonFantasma
             ],
           ),
         ),

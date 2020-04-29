@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:vector_math/vector_math_64.dart' as math;
 import '../../Componentes/widgets_pantalla.dart';
-import '../../Componentes/widgets_pantalla.dart';
-import 'package:dietario_app/Pantallas/DetallesComida/detalles_comida.dart';
 import 'package:dietario_app/Pantallas/Configuracion/configuracion.dart';
 
 

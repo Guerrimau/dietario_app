@@ -53,6 +53,7 @@ flutter:
     - assets/images/hotcake.jpg
     - assets/images/perfil.jpg
     - assets/images/fondo.jpg
+    - assets/images/nutriologo.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
