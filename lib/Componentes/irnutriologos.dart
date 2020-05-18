@@ -1,11 +1,12 @@
+import 'package:dietario_app/Pantallas/BusquedaNutriologo/busqueda_nutriologos.dart';
 import 'package:flutter/material.dart';
 import 'boton_verde.dart';
 import '../Pantallas/DetallesComida/detalles_comida.dart';
 
-class TarjetaComida extends StatelessWidget {
+class Irnutriologos extends StatelessWidget {
   
-  final String pathImage = "assets/images/ensalada.jpg";
-  final String nombredeComida = "Ensalada";
+  final String pathImage = "assets/images/teamnutri.jpg";
+  final String nombre = "Nuetro Equipo";
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class TarjetaComida extends StatelessWidget {
               left: 5
             ),
             child: Text(
-              "20 min",
+              "24 Hr",
               style: TextStyle(
                 fontFamily: "Lato",
                 fontSize: 15,
@@ -51,7 +52,7 @@ class TarjetaComida extends StatelessWidget {
                     left: 5
                   ),
                   child: Text(
-                    "86",
+                    "100",
                     style: TextStyle(
                       fontFamily: "Lato",
                       fontSize: 15,
@@ -67,14 +68,14 @@ class TarjetaComida extends StatelessWidget {
     );
     
     
-    final titulodeComida = Container(
+    final titulonutri = Container(
       margin: EdgeInsets.only(
         top: 12.0,
         left: 20.0,
         bottom: 10
       ),
       child: Text(
-        nombredeComida,
+        nombre,
         style: TextStyle(
           fontFamily: "Lato",
           fontSize: 20.0,
@@ -104,12 +105,12 @@ class TarjetaComida extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          titulodeComida,
+          titulonutri,
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget> [
               tiempoReceta,
-              BotonVerde("Detalles")  
+              BotonVerde("Conocer")  
             ]
           ),
         ],
@@ -135,7 +136,7 @@ class TarjetaComida extends StatelessWidget {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => DetallesComida()),
+              MaterialPageRoute(builder: (context) => BusquedaNutriologos()),
             );
           },
           child: Container(

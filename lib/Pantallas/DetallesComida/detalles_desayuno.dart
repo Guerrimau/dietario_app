@@ -1,12 +1,12 @@
 import "package:flutter/material.dart";
 import '../../Componentes/widgets_pantalla.dart';
 
-class DetallesComida extends StatelessWidget {
+class DetallesDesayuno extends StatelessWidget {
   
-  final pathImage = "assets/images/ensalada.jpg";
-  final nombre = "Ensalada";
-  final double gramos = 220;
-  final double calorias = 760;
+  final pathImage = "assets/images/hotcake.jpg";
+  final nombre = "Hot Cakes de avena";
+  final double gramos = 280;
+  final double calorias = 121;
   
 
   @override
@@ -139,9 +139,9 @@ class ImagenComida extends StatelessWidget {
 
 class Macronutrientes extends StatelessWidget {
   
-  final double proteinas = 26;
-  final double carbohidratos = 180;
-  final double grasas = 14;
+  final double proteinas = 3.3;
+  final double carbohidratos = 22.1;
+  final double grasas = 2.1;
   
   @override
   Widget build(BuildContext context) {
@@ -179,7 +179,7 @@ class Macronutrientes extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "${proteinas.toStringAsFixed(0)} gr",
+                    "${proteinas.toStringAsFixed(1)} gr",
                     style: TextStyle(
                       fontFamily: 'Lato',
                       fontWeight: FontWeight.w600,
@@ -209,7 +209,7 @@ class Macronutrientes extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "${carbohidratos.toStringAsFixed(0)} gr",
+                    "${carbohidratos.toStringAsFixed(1)} gr",
                     style: TextStyle(
                       fontFamily: 'Lato',
                       fontWeight: FontWeight.w600,
@@ -242,7 +242,7 @@ class Macronutrientes extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "${grasas.toStringAsFixed(0)} gr",
+                    "${grasas.toStringAsFixed(1)} gr",
                     style: TextStyle(
                       fontFamily: 'Lato',
                       fontWeight: FontWeight.w600,
@@ -271,11 +271,9 @@ class Macronutrientes extends StatelessWidget {
 
 class Ingredientes extends StatelessWidget {
  
-  final String ingredienteUno = "1 Lechuga";
-  final String ingredienteDos = "Dos tomates maduros";
-  final String ingredienteTres = "Un pepino mediano";
-  final String ingredienteCuatro = "Aceite de oliva";
-  final String ingredienteCinco = "Vinagre";
+  final String ingredienteUno = "· 150gr de Avena";
+  final String ingredienteDos = "· 80ml de Leche";
+  final String ingredienteTres = "· 2pz de Huevo";
  
   @override
   Widget build(BuildContext context) {
@@ -292,7 +290,7 @@ class Ingredientes extends StatelessWidget {
         
         /*Falta implementar que la altura del contenedor funcione 
         Respecto a los items adentro*/
-        height: 250,
+        height: 180,
 
         decoration: BoxDecoration(
           color: Colors.white,
@@ -372,35 +370,6 @@ class Ingredientes extends StatelessWidget {
               ),
               child: Text(
                 ingredienteTres,
-                style: TextStyle(
-                  fontFamily: 'Lato',
-                  fontSize: 16,
-                  color: Colors.grey
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                left: 30,
-                bottom: 10
-              ),
-              child: Text(
-                ingredienteCuatro,
-                style: TextStyle(
-                  fontFamily: 'Lato',
-                  fontSize: 16,
-                  color: Colors.grey
-                ),
-              ),
-              
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                left: 30,
-                bottom: 10
-              ),
-              child: Text(
-                ingredienteCinco,
                 style: TextStyle(
                   fontFamily: 'Lato',
                   fontSize: 16,

@@ -198,7 +198,7 @@ class _RadialProgress extends StatelessWidget {
             text: TextSpan(
               children: [
                 TextSpan(
-                  text: "123123",
+                  text: "1825",
                   style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.w700,
@@ -231,7 +231,7 @@ class _RadialPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()
-      ..strokeWidth = 10
+      ..strokeWidth = 30
       ..color = Color(0xFF66E002)
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;

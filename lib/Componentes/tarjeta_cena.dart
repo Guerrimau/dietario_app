@@ -1,11 +1,12 @@
+import 'package:dietario_app/Pantallas/DetallesComida/detalles_cena.dart';
 import 'package:flutter/material.dart';
 import 'boton_verde.dart';
 import '../Pantallas/DetallesComida/detalles_comida.dart';
 
-class TarjetaComida extends StatelessWidget {
+class TarjetaCena extends StatelessWidget {
   
-  final String pathImage = "assets/images/ensalada.jpg";
-  final String nombredeComida = "Ensalada";
+  final String pathImage = "assets/images/fruta.jpg";
+  final String nombredeComida = "Fruta con yogurt";
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class TarjetaComida extends StatelessWidget {
               left: 5
             ),
             child: Text(
-              "20 min",
+              "10 min",
               style: TextStyle(
                 fontFamily: "Lato",
                 fontSize: 15,
@@ -51,7 +52,7 @@ class TarjetaComida extends StatelessWidget {
                     left: 5
                   ),
                   child: Text(
-                    "86",
+                    "100",
                     style: TextStyle(
                       fontFamily: "Lato",
                       fontSize: 15,
@@ -135,7 +136,7 @@ class TarjetaComida extends StatelessWidget {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => DetallesComida()),
+              MaterialPageRoute(builder: (context) => DetallesCena()),
             );
           },
           child: Container(

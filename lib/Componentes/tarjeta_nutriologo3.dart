@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-class TarjetaNutriologo extends StatelessWidget {
-  String foto = "assets/images/nutriologo.jpg";
+class TarjetaNutriologo3 extends StatelessWidget {
+  String foto = "assets/images/nutriologo3.jpeg";
   String nombre;
   String especialidad;
 
   @override
   Widget build(BuildContext context) {
-    double altura = 100;
 
     final fotografia = Container(
       width: MediaQuery.of(context).size.width * 0.30,
@@ -33,11 +32,28 @@ class TarjetaNutriologo extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(25.0)),
         shape: BoxShape.rectangle,
         color: Colors.brown
+        
       ),
       child: Row(
-        children: <Widget> [
-          fotografia
-        ]
+      
+
+        children: <Widget>[
+          fotografia,
+          Expanded( 
+            child: Center(child: Text("Pablovich RicoAss \n Sudan Dulces",textAlign: 
+                  TextAlign.center,style: TextStyle(color: 
+                Colors.white,fontSize: 20),
+              ) ,
+            
+            ),
+            
+            
+      
+          ),
+    
+    
+  ],
+        
       ),
     );
   }

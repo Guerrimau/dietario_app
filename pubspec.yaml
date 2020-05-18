@@ -54,6 +54,26 @@ flutter:
     - assets/images/perfil.jpg
     - assets/images/fondo.jpg
     - assets/images/nutriologo.jpg
+    - assets/images/ensalada.jpg
+    - assets/images/fruta.jpg
+    - assets/images/teamnutri.jpg
+    - assets/images/nutriologo1.jpeg
+    - assets/images/nutriologo2.jpeg
+    - assets/images/nutriologo3.jpeg
+    - assets/images/nutriologo4.jpeg
+    - assets/images/nutriologo5.jpeg
+    - assets/images/call.png
+    - assets/images/clock.png
+    - assets/images/email.png
+    - assets/images/img1.png
+    - assets/images/img2.png
+    - assets/images/img3.png
+    - assets/images/list.png
+    - assets/images/map.png
+    - assets/images/mappin.png
+    - assets/images/scope.png
+    - assets/images/video_call.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

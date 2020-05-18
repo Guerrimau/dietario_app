@@ -1,5 +1,10 @@
 import 'package:dietario_app/Componentes/categoria_nutriologo.dart';
-import 'package:dietario_app/Componentes/tarjeta_nutriologo.dart';
+import 'package:dietario_app/Componentes/tarjeta_nutriologo1.dart';
+import 'package:dietario_app/Componentes/tarjeta_nutriologo2.dart';
+import 'package:dietario_app/Componentes/tarjeta_nutriologo3.dart';
+import 'package:dietario_app/Componentes/tarjeta_nutriologo4.dart';
+import 'package:dietario_app/Componentes/tarjeta_nutriologo5.dart';
+import 'package:dietario_app/Pantallas/DetallesComida/detalles_cena.dart';
 import 'package:flutter/material.dart';
 
 class BusquedaNutriologos extends StatelessWidget {
@@ -55,11 +60,11 @@ class BusquedaNutriologos extends StatelessWidget {
             ]),
           ),
           SubTitulos("Nutriologos"),
-          TarjetaNutriologo(),
-          TarjetaNutriologo(),
-          TarjetaNutriologo(),
-          TarjetaNutriologo(),
-          TarjetaNutriologo(),
+          TarjetaNutriologo1(),
+          TarjetaNutriologo2(),
+          TarjetaNutriologo3(),
+          TarjetaNutriologo4(),
+          TarjetaNutriologo5(),
 
         ]),
       ),

@@ -1,3 +1,4 @@
+import 'package:dietario_app/Componentes/irnutriologos.dart';
 import 'package:dietario_app/Pantallas/BusquedaNutriologo/busqueda_nutriologos.dart';
 import 'package:flutter/material.dart';
 import '../../Componentes/widgets_pantalla.dart';
@@ -48,7 +49,7 @@ class PantallaInicio extends StatelessWidget {
               SubTitulo("Tu comida de hoy"),
               TarjetaComida(),
               SubTitulo("Nutrinfo"),
-              botonFantasma
+              Irnutriologos(),
             ],
           ),
         ),

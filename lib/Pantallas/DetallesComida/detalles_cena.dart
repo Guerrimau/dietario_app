@@ -1,12 +1,12 @@
 import "package:flutter/material.dart";
 import '../../Componentes/widgets_pantalla.dart';
 
-class DetallesComida extends StatelessWidget {
+class DetallesCena extends StatelessWidget {
   
-  final pathImage = "assets/images/ensalada.jpg";
-  final nombre = "Ensalada";
-  final double gramos = 220;
-  final double calorias = 760;
+  final pathImage = "assets/images/fruta.jpg";
+  final nombre = "Fruta con Yogurt";
+  final double gramos = 100;
+  final double calorias = 86;
   
 
   @override
@@ -139,9 +139,9 @@ class ImagenComida extends StatelessWidget {
 
 class Macronutrientes extends StatelessWidget {
   
-  final double proteinas = 26;
-  final double carbohidratos = 180;
-  final double grasas = 14;
+  final double proteinas = 100;
+  final double carbohidratos = 22.4;
+  final double grasas = .10;
   
   @override
   Widget build(BuildContext context) {
@@ -179,7 +179,7 @@ class Macronutrientes extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "${proteinas.toStringAsFixed(0)} gr",
+                    "${proteinas.toStringAsFixed(1)} gr",
                     style: TextStyle(
                       fontFamily: 'Lato',
                       fontWeight: FontWeight.w600,
@@ -209,7 +209,7 @@ class Macronutrientes extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "${carbohidratos.toStringAsFixed(0)} gr",
+                    "${carbohidratos.toStringAsFixed(1)} gr",
                     style: TextStyle(
                       fontFamily: 'Lato',
                       fontWeight: FontWeight.w600,
@@ -242,7 +242,7 @@ class Macronutrientes extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "${grasas.toStringAsFixed(0)} gr",
+                    "${grasas.toStringAsFixed(1)} gr",
                     style: TextStyle(
                       fontFamily: 'Lato',
                       fontWeight: FontWeight.w600,
@@ -271,11 +271,11 @@ class Macronutrientes extends StatelessWidget {
 
 class Ingredientes extends StatelessWidget {
  
-  final String ingredienteUno = "1 Lechuga";
-  final String ingredienteDos = "Dos tomates maduros";
-  final String ingredienteTres = "Un pepino mediano";
-  final String ingredienteCuatro = "Aceite de oliva";
-  final String ingredienteCinco = "Vinagre";
+  final String ingredienteUno = "1 Vaso de yogur natural";
+  final String ingredienteDos = "1 Kiwi";
+  final String ingredienteTres = "1 Pera";
+  final String ingredienteCuatro = "1 Rebanada de melon";
+  final String ingredienteCinco = "1 Manzana";
  
   @override
   Widget build(BuildContext context) {
