@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Pantallas/BusquedaNutriologo/perfil_nutriologo.dart';
 
 class TarjetaNutriologo3 extends StatelessWidget {
   String foto = "assets/images/nutriologo3.jpeg";

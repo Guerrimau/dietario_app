@@ -1,6 +1,7 @@
 
 import 'package:dietario_app/Pantallas/DetallesComida/detalles_cena.dart';
 import 'package:flutter/material.dart';
+import '../Pantallas/BusquedaNutriologo/perfil_nutriologo.dart';
 
 class TarjetaNutriologo1 extends StatelessWidget {
   String foto = "assets/images/nutriologo.jpg";
@@ -30,7 +31,7 @@ class TarjetaNutriologo1 extends StatelessWidget {
         onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => DetallesCena()),
+              MaterialPageRoute(builder: (context) => PerfilNutriologo()),
             );
           },
         child : Container(
